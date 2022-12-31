@@ -1,0 +1,215 @@
+/* 给大页面框架的样式 */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-famliy: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  min-height: 100vh;
+  background: #232c33;
+}
+
+.navigation {
+  position: relative;
+  height: 948px;
+  width: 70px;
+  background: #2b343b;
+  box-shadow: 10px 0 0 #4187f6;
+  border-left: 10px solid #2b343b;
+  overflow-x: hidden;
+  transition: width 0.5s;
+}
+
+.navigation:hover {
+  width: 300px
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.navigation ul .active {
+  background: #4187f6;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation ul li.active a::before{
+  content: '';
+  position: absolute;
+  top: -30px;
+  right:0;
+  width: 30px;
+  height: 30px;
+  /* background: #f00; */
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 #4187f6;
+}
+
+.navigation ul li.active a::after{
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right:0;
+  width: 30px;
+  height: 30px;
+  /* background: #f00; */
+  border-radius: 50%;
+   box-shadow: 15px -15px 0 #4187f6;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 100px;
+  line-height: 115px;
+  text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+  position: relative;
+  font-size: 1.5em;
+  z-index: 1;
+}
+
+.navigation ul li a .title {
+  position:relative;
+  display: block;
+  padding-left:60px;
+  height:90px;
+  line-height: 100px;
+  white- space: nowrap;
+}
+
+.content-container{
+  margin-top: 30px;
+  margin-left: 80px;
+  width:1200px;
+
+}
+
+.content-container .content{
+  display: none;
+}
+
+.content-container .content.active {
+  display:block;
+}
+
+@media screen and (max-width: 500px) {
+  /* .tabs-container .tabs .tab {
+    font-weight: 33%;
+     min-width: 90vmin;
+    height: 70vh; 
+  } */
+  .content-container {
+    padding: 1em 1.2em;
+  }
+}
+
+/* 给第一个tab内部的样式 */
+.bBox1 {
+  /* border: solid 2px black; */
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.empty {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border: solid 3px black;
+    background: white;
+}
+
+.fill {
+    /* background-image: url('https://tse4-mm.cn.bing.net/th/id/OIP-C.CV_FWM1SzRjiOxJQDUoZmgHaHa?w=200&h=200&c=7&r=0&o=5&dpr=1.7&pid=1.7'); */
+    display: flex;
+    align-item: center;
+    justify-content: center;
+    height: 145px;
+    width: 145px;
+    cursor: pointer;
+}
+
+.fill img {
+  width: 100%;
+  height:auto;
+}
+
+.hold {
+    border: solid 5px #ccc;
+}
+
+.hovered {
+    background-color: #333;
+    border-color: white;
+    border-style: dashed;
+}
+
+@media(max-width:800px) {
+    body {
+        flex-direction: column;
+    }
+}
+/* 第四个tab内样式 */
+.bBOX4 {
+  font: 16px/1.5 'Work Sans', sans-serif;
+  color: #444;
+}
+
+.box {
+  background-color: #214;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+  font-weight: 200;
+  color: #dce;
+  opacity: 0.1;
+}
+
+/* .canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}  */
