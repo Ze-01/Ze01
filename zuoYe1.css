@@ -108,6 +108,9 @@ body {
 }
 
 .content-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 30px;
   margin-left: 80px;
   width:1200px;
@@ -134,6 +137,7 @@ body {
 }
 
 /* 给第一个tab内部的样式 */
+
 .bBox1 {
   /* border: solid 2px black; */
   display: flex;
@@ -168,7 +172,7 @@ body {
 }
 
 .hold {
-    border: solid 5px #ccc;
+    border: solid 5px #4187f6;
 }
 
 .hovered {
@@ -182,34 +186,221 @@ body {
         flex-direction: column;
     }
 }
-/* 第四个tab内样式 */
-.bBOX4 {
-  font: 16px/1.5 'Work Sans', sans-serif;
-  color: #444;
+
+/* 第二个tab样式 */
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
 }
 
-.box {
-  background-color: #214;
-  padding: 0;
-  margin: 0;
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --color-bg: #4187f6;
+  --color-dark: #156cf7;
+  --color-light: #5895f7;
+  --color-vc-bg: #00000049;
+  --color-pb-bg: #555555;
+  --color-pbm-bg: #4187f6;
+  --color-pbl-bg: #dadada;
+  --color-btn: #4187f6;
+}
+
+.content2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60vw;
+  min-height: 60vh;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--color-bg);
+}
+
+.video-box {
+  display: none;
+  width: 40rem;
+  height: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--color-bg);
+  box-shadow: 1rem 1rem 2rem var(--color-dark),
+    -1rem -1rem 2rem var(--color-light);
+  font-size: 10px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.video-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: 'Material Icons', serif;
+  background-color: #000000;
   overflow: hidden;
+}
+
+.pause-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--color-bg);
+  transform: translate(-50%, -50%);
+}
+
+.video-main {
+  width: 100%;
+}
+
+.video-control {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 3.6rem;
+  cursor: default;
+  opacity: 0;
+  opacity: 1;
+  transform: opacity 0.5s;
+}
+
+.video-content:hover .video-control {
+  opacity: 1;
+}
+
+.progress-bar-box {
+  flex: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 0.6rem;
+  background-color: var(--color-pb-bg);
+}
+
+.progress-bar-main {
+  display: block;
+  position: absolute;
+  height: 100%;
+  background-color: var(--color-pbm-bg);
+  z-index: 1;
+}
+
+.progress-bar-load {
+  display: block;
+  position: absolute;
+  height: 100%;
+  background-color: var(--color-pbl-bg);
+  z-index: 0;
+}
+
+.control-btn-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  background-color: var(--color-vc-bg);
+  padding: 0 1rem;
+}
+
+.control-btn-box>span {
+  width: fit-content;
+  color: var(--color-btn);
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* 第三个tab */
+.dnd-file-uploader {
+  width: 75vw;
+}
+
+.drop-area {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #8c8c8c;
+  border: 6px dashed #bfbfbf;
+  border-radius: 16px;
+  user-select: none;
+}
+
+.upload-icon {
+  color: #40a9ff;
+  font-size: 100px;
+}
+
+.tip {
+  font-size: 40px;
+}
+
+.task-list {
+  height: 40vh;
+  margin-top: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+  padding: 16px;
+  position: relative;
+}
+
+
+
+
+/* 第四个tab内样式 */
+
+.tab {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 h1 {
-  font-size: 5em;
-  text-align: center;
-  font-weight: 200;
-  color: #dce;
-  opacity: 0.1;
+    font-size: 6em;
+    text-align: center;
+    font-weight: 200;
+    color: #dce;
+    opacity: .1;
 }
 
-/* .canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}  */
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}

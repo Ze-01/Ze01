@@ -42,6 +42,7 @@
       </ul>
     </div>
     <div class="content-container">
+      <!-- 第一个tab -->
       <div class="content active">
         <div class="bBox1">
           <div class="empty">
@@ -56,18 +57,79 @@
           <div class="empty"></div>
           <div class="empty"></div>
           <div class="empty"></div>
+          <div class="empty"></div>
         </div>
       </div>
+      <!-- 第二个tab -->
       <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-          molestias autem voluptates itaque neque? Vel quod dolorem excepturi
-          quis sequi enim quibusdam nemo optio aperiam sapiente? Ad facilis
-          magnam laborum!
-        </p>
+        <abbr
+          title="此处应为学生电脑屏幕，暂不会此技术，先做出框架播放视频实验"
+        >
+          <div class="content2">
+            <!-- 视频 -->
+            <div class="video-box">
+              <!-- 视频屏幕区域 -->
+              <div class="video-content">
+                <!-- 视频暂停时显示的图标 -->
+                <span class="pause-icon material-icons-outlined">
+                  play_circle_outline
+                </span>
+                <!-- 视频主区域 -->
+                <video class="video-main"></video>
+                <!-- 视频控制区域 -->
+                <div class="video-control">
+                  <!-- 进度条 -->
+                  <div class="progress-bar-box">
+                    <span class="progress-bar-main" style="width: 0;"></span>
+                    <span class="progress-bar-load" style="width: 0;"></span>
+                  </div>
+                  <!-- 按钮 -->
+                  <div class="control-btn-box">
+                    <span class="play-btn material-icons-outlined">
+                      play_circle_outline
+                    </span>
+                    <span class="full-screen-btn material-icons-outlined">
+                      fullscreen
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </abbr>
       </div>
-      <div class="content"></div>
-      <div class="content"></div>
+      <!-- 第三个tab -->
+      <div class="content">
+        <div class="dnd-file-uploader">
+          <div class="drop-area">
+            <ion-icon class="upload-icon" name="cloud-upload"></ion-icon>
+            <p class="tip">Drag&Drop files here</p>
+          </div>
+          <div class="task-list"></div>
+        </div>
+
+        <template id="template-task">
+          <div class="task">
+            <a class="task-name" target="_blank">some file name</a>
+            <span class="task-progress">50%</span>
+          </div>
+        </template>
+
+        <script
+          type="module"
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+          nomodule
+          src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="./fileUpload.js"></script>
+      </div>
+      <!-- 第四个tab -->
+      <div class="content tab">
+        <h1>Let's Relax</h1>
+        <canvas id="canvas" class="canvas"></canvas>
+      </div>
     </div>
     <script
       type="module"
